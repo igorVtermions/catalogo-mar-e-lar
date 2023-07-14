@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin btn{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: $bg-color;
+    color: $bg-color-secundary;
+    border: 2px $bg-color-secundary solid;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+@mixin hoverBtn{
+  
+
+}

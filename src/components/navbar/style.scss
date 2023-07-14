@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $bg-color-secundary;
+  img {
+    width: 150px;
+  }
+}
