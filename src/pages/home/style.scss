@@ -1,8 +1,9 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 .container {
   margin-top: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
@@ -11,7 +12,7 @@
     background-color: white;
     padding: 15px;
     display: flex;
-    align-items: center;
+    @include center;
     flex-direction: column;
     gap: 20px;
     border-radius: 20px;
@@ -21,11 +22,47 @@
       width: 60%;
     }
 
-    h1{
-        font-size: 25px;
+    h1 {
+      font-size: 25px;
     }
-    h2{
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .containerCard {
+    width: 40%;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .containerCard {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    .containerCard {
+      width: 70%;
+      h1 {
         font-size: 20px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 15px;
+      }
     }
   }
 }
