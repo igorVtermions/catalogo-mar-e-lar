@@ -4,7 +4,7 @@ import ReactModal from "react-modal";
 import Modal from "../../components/modal/Modal";
 
 type ListItem = {
-  id: number;
+  id: string;
   name: string;
   alt: string;
   description: string;
@@ -33,7 +33,7 @@ export default function Home() {
 
   const List: ListItem[] = [
     {
-      id: 1,
+      id: '1',
       name: "Ombrelone Redondo (S/Abas)",
       alt: "Ombrelone de 2,40mt",
       price: "R$ 370,00",
@@ -42,7 +42,7 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556033996177468/ombrelone-redondo-2mt.jpg",
     },
     {
-      id: 2,
+      id: '2',
       name: "Ombrelone Redondo (C/Abas)",
       alt: "Ombrelone de 2,40mt",
       price: "R$ 385,00",
@@ -51,7 +51,7 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556034344292445/ombrelone-redondo-com-aba.jpg",
     },
     {
-      id: 3,
+      id: '3',
       name: "Ombrelone Quadrado (S/Abas)",
       alt: "Ombrelone quadrado",
       price: "R$ 330,00",
@@ -60,7 +60,7 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556033580929115/ombrelone-quadrado-branco.jpg",
     },
     {
-      id: 4,
+      id: '4',
       name: "Ombrelone Quadrado (C/Abas)",
       alt: "Ombrelone quadrado",
       price: "R$ 350,00",
@@ -69,11 +69,12 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556033207648427/ombrelone-amarelo-com-aba-branco.jpg",
     },
   ];
-    const [modalCard, setModalCard] = useState([]);
+  
+    const [modalCard, setModalCard] = useState<ListItem[]>([]);
   
 
   const roadItem = List.map((item: ListItem) => (
-    <div key={item.id} className="containerCard" onClick={openModal}>
+    <div key={item.id} className="containerCard" onClick={() => openModal(item)}>
       <img src={item.photo1} alt={item.alt} />
       <h1>{item.name}</h1>
       <p>{item.description}</p>
@@ -83,8 +84,8 @@ export default function Home() {
 
   const [modalOpen, setModalOpen] = useState(false);
 
-  function openModal(item) {
-    setModalCard([item])
+  function openModal(item : ListItem) {
+    setModalCard([item]);
     setModalOpen(true);
   }
 
