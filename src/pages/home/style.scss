@@ -1,0 +1,14 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    .container{
+        background-color: white;
+        padding: 70px;
+        gap: 100px;
+        .fistImg{
+            width: 200px;
+        }
+    }
+}
