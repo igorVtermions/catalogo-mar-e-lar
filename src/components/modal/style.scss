@@ -1,3 +1,13 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
+.modal{
+
+    .btnClose{
+        position: absolute;
+        left: 50px;
+        top: 40px;
+        cursor: pointer;
+    }
+   
+}
