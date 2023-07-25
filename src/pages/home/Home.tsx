@@ -83,6 +83,14 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556033580929115/ombrelone-quadrado-branco.jpg",
       photo2:
         "https://cdn.discordapp.com/attachments/1037425403985399841/1131674972809597068/WhatsApp_Image_2023-07-06_at_08.50.21.jpeg",
+      photo3:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133368117091901460/rtc-ombrelone-central-2x2-quadrado-1.jpg",
+      photo4:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131692932710285392/ombrelone-quadrado-branco-2.png",
+      photo5:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133365843821076561/c0f662d85e.jpg",
+      photo6:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133366078802767922/211356291912245.jpg",
     },
     {
       id: "4",
@@ -92,6 +100,15 @@ export default function Home() {
       description: "Ombrelones de 1,67 x 1,67 mt",
       photo1:
         "https://cdn.discordapp.com/attachments/1037425403985399841/1130556033207648427/ombrelone-amarelo-com-aba-branco.jpg",
+      photo2:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133012879919042630/ombrelone_2x2_com_aba_sem_base_257_3_3d12a93cefc4ba5267b7024c854dc7be.jpg",
+      photo3:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133373292124848138/1726995123_1.webp",
+      photo4:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133380036670541914/aluguel-ombrelone.jpg",
+      photo5:
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1133382066818535434/718844915_kit-quadrado-2411_03-550x550.jpg",
+      photo6: "",
     },
   ];
 
