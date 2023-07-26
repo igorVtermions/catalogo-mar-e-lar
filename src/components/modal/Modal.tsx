@@ -68,11 +68,6 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
                 <img src={globe} className="img" /> Site
               </a>
             </div>
-
-            <details>
-              <summary>Detalhes do produto</summary>
-               <p> {item.description}</p>
-            </details>
           </div>
         </div>
       ))}
