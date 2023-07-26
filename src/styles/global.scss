@@ -24,3 +24,12 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
+
+@media (max-width: 800px) {
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
