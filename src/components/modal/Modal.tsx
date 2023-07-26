@@ -16,6 +16,7 @@ type ListItem = {
   description: string;
   price: string;
   photos: string[];
+  link: string;
 };
 
 type ModalProps = {
@@ -38,8 +39,6 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
           <div className="container">
             <Swiper
               slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
               className="mainSlide"
             >
               {item.photos.map((item, index) => (
@@ -61,7 +60,7 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
                 WhatsApp
               </a>
               <a
-                href="https://www.marelarombrelones.com/produtos"
+                href={item.link}
                 target="_blank"
                 className="link"
               >

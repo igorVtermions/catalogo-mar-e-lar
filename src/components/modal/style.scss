@@ -68,7 +68,8 @@
   .modal {
     .container {
       .name{
-        font-size: 35px;
+        font-size: 30px;
+        text-align: center;
       }
     .mainSlide {
       width: 99%;
@@ -84,6 +85,9 @@
 
 @media(max-width: 520px){
   .modal {
+    .btnClose{
+      left: 15px;
+    }
     .container {
       gap: 20px;
     .mainSlide {
