@@ -55,16 +55,18 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
               <a
                 href="https://wa.me/5521975272434?text=Ol%C3%A1%2C+tudo+bem%3F+Gostaria+de+um+or%C3%A7amento%21"
                 target="_blank"
-                className="link">
-                <img src={whatsapp} className="img"/>
+                className="link"
+              >
+                <img src={whatsapp} className="img" />
                 WhatsApp
               </a>
               <a
                 href="https://www.marelarombrelones.com/produtos"
                 target="_blank"
-                className="link">
+                className="link"
+              >
                 {" "}
-                <img src={globe} className="img"/> Site
+                <img src={globe} className="img" /> Site
               </a>
             </div>
           </div>
