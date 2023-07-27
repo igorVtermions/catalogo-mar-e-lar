@@ -7,13 +7,14 @@ import "swiper/scss/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import whatsapp from "../../assets/whatsapp-logo.svg";
 import globe from "../../assets/globe.svg";
+
 register();
 
 type ListItem = {
   id: string;
   name: string;
   alt: string;
-  description: string;
+  description: string[];
   price: string;
   photos: string[];
   link: string;
@@ -37,10 +38,7 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
             className="btnClose"
           />
           <div className="container">
-            <Swiper
-              slidesPerView={1}
-              className="mainSlide"
-            >
+            <Swiper slidesPerView={1} className="mainSlide">
               {item.photos.map((item, index) => (
                 <SwiperSlide key={index} className="slide">
                   <img src={item} className="imgSlide" />
@@ -59,15 +57,17 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
                 <img src={whatsapp} className="img" />
                 WhatsApp
               </a>
-              <a
-                href={item.link}
-                target="_blank"
-                className="link"
-              >
+              <a href={item.link} target="_blank" className="link">
                 {" "}
                 <img src={globe} className="img" /> Site
               </a>
             </div>
+            <details>
+              <summary>Descrição do Produto</summary>
+              {item.description.map((item,index) => (
+                <p key={index}>- {item}</p>
+              ))}
+            </details>
           </div>
         </div>
       ))}

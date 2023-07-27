@@ -7,7 +7,7 @@ type ListItem = {
   id: string;
   name: string;
   alt: string;
-  description: string;
+  description: string[];
   price: string;
   photos: string[];
   link: string;
@@ -36,7 +36,14 @@ export default function Home() {
       name: "Ombrelone Redondo (S/Abas)",
       alt: "Ombrelone de 2,40mt",
       price: "R$ 370,00",
-      description: "Ombrelone de 2,40mt",
+      description: [
+        "Ombrelone de Madeira 2,40mt",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+        "8 Varetas"
+      ],
       link: "https://www.marelarombrelones.com/product-page/ombrelones",
       photos: [
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133822750981636216/ombrelone-azul.jpg",
@@ -52,7 +59,14 @@ export default function Home() {
       name: "Ombrelone Redondo (C/Abas)",
       alt: "Ombrelone de 2,40mt",
       price: "R$ 385,00",
-      description: "Ombrelone de 2,40mt",
+      description: [
+        "Ombrelone com Abas de Madeira 2,40mt",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+        "8 Varetas"
+      ],
       link: "https://www.marelarombrelones.com/product-page/ombrelone-c-abas",
       photos: [
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133822751602393209/ombrelone-redondo-com-aba-azul.jpg",
@@ -70,7 +84,13 @@ export default function Home() {
       name: "Ombrelone Quadrado (S/Abas)",
       alt: "Ombrelone quadrado",
       price: "R$ 330,00",
-      description: "Ombrelones de 1,67 x 1,67 mt",
+      description: [
+        "Ombrelones Quadrado de 1,67 x 1,67mt",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+      ],
       link: "https://www.marelarombrelones.com/product-page/ombrelone-quadrado-s-aba",
       photos: [
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133822751237484695/ombrelone-quadrado-azul.jpg",
@@ -86,7 +106,13 @@ export default function Home() {
       name: "Ombrelone Quadrado (C/Abas)",
       alt: "Ombrelone quadrado",
       price: "R$ 350,00",
-      description: "Ombrelones de 1,67 x 1,67 mt",
+      description: [
+        "Ombrelones Quadrado com Abas de 1,67 x 1,67mt",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+      ],
       link: "https://www.marelarombrelones.com/product-page/ombrelone-quadrado-c-aba",
       photos: [
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133822750558007436/ombrelone-amarelo-com-aba-azul.jpg",
@@ -94,6 +120,53 @@ export default function Home() {
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133373292124848138/1726995123_1.webp",
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133380036670541914/aluguel-ombrelone.jpg",
         "https://cdn.discordapp.com/attachments/1037425403985399841/1133382066818535434/718844915_kit-quadrado-2411_03-550x550.jpg",
+      ],
+    },
+    {
+      id: "5",
+      name: "Ombrelone de 3 Metros (S/Abas)",
+      alt: "Ombrelone de 3mt",
+      price: "R$ 470,00",
+      description: [
+        "Ombrelone com Abas de Madeira 3,0mt",
+        "Altura de 2,80 metros",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+        "8 Varetas"
+      ],
+      link: "https://www.marelarombrelones.com/product-page/ombrelone",
+      photos: [
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1134114145747353670/ab22f3_17349f098bb34e93bf98a3cbe03b325amv2.jpg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131641428074823801/WhatsApp_Image_2023-07-06_at_09.12.19_1.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131641428330684478/WhatsApp_Image_2023-07-06_at_09.12.19.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131645104214515804/WhatsApp_Image_2023-07-07_at_16.53.49.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131645104705253386/WhatsApp_Image_2023-07-07_at_16.53.51.jpeg",
+      ],
+    },
+    {
+      id: "6",
+      name: "Ombrelone de 3 Metros (C/Abas)",
+      alt: "Ombrelone de 3mt com Abas",
+      price: "R$ 490,00",
+      description: [
+        "Ombrelone com Abas de Madeira 3,0mt",
+        "Altura de 2,80 metros",
+        "Estrutura: Madeira Envernizada",
+        "A cor é da escolha do cliente",
+        "Capa de lona Bagum",
+        "Com proteção UV",
+        "8 Varetas"
+      ],
+      link: "https://www.marelarombrelones.com/product-page/ombrelone-de-3mt-c-aba",
+      photos: [
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1134124597365723166/ab22f3_0e64a09f8aff45e9a8961e4975e43661mv2.jpg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131646099862597834/WhatsApp_Image_2023-07-07_at_16.53.53.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131646100399460362/WhatsApp_Image_2023-07-07_at_16.53.50.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131647345856098405/WhatsApp_Image_2023-07-06_at_09.12.18.jpeg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131653179046625411/1-5.jpg",
+        "https://cdn.discordapp.com/attachments/1037425403985399841/1131662473330688140/3-xpbkuo.jpg",
       ],
     },
   ];
@@ -108,7 +181,7 @@ export default function Home() {
     >
       <img src={item.photos[0]} alt={item.alt} />
       <h1>{item.name}</h1>
-      <p>{item.description}</p>
+      <p>{item.description[0]}</p>
       <h2>{item.price}</h2>
     </div>
   ));
