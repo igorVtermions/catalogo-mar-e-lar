@@ -1,14 +1,18 @@
 import Close from "../../assets/close.svg";
 import "./style.scss";
-import { register } from "swiper/element";
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
 import whatsapp from "../../assets/whatsapp-logo.svg";
 import globe from "../../assets/globe.svg";
+import SwiperCore from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import "swiper/scss/autoplay";
+import { useState, useEffect } from "react";
 
-register();
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 type ListItem = {
   id: string;
@@ -27,6 +31,20 @@ type ModalProps = {
 };
 
 export default function Modal({ modalCard, closeModal }: ModalProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth <= 768);
+    };
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
   return (
     <>
       {modalCard.map((item) => (
@@ -38,7 +56,15 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
             className="btnClose"
           />
           <div className="container">
-            <Swiper slidesPerView={1} className="mainSlide">
+            <Swiper
+              navigation={!isMobile}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 5000 }}
+              loop
+              spaceBetween={30}
+              slidesPerView={1}
+              className="mainSlide"
+            >
               {item.photos.map((item, index) => (
                 <SwiperSlide key={index} className="slide">
                   <img src={item} className="imgSlide" />
@@ -64,7 +90,7 @@ export default function Modal({ modalCard, closeModal }: ModalProps) {
             </div>
             <details>
               <summary>Descrição do Produto</summary>
-              {item.description.map((item,index) => (
+              {item.description.map((item, index) => (
                 <p key={index}>- {item}</p>
               ))}
             </details>
